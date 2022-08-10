@@ -1,0 +1,47 @@
+/*=======================================
+            Paddings - Start
+=======================================*/
+@for $i from 1 through 20 {
+    .p-#{$i} {
+        padding: calc(#{$space-x} * #{$i}) !important;
+    }
+}
+
+@for $i from 1 through 20 {
+    .px-#{$i} {
+        padding: 0px calc(#{$space-x} * #{$i}) !important;
+    }
+}
+
+@for $i from 1 through 20 {
+    .py-#{$i} {
+        padding: calc(#{$space-x} * #{$i}) 0px !important;
+    }
+}
+
+@for $i from 1 through 20 {
+    .pt-#{$i} {
+        padding-top: calc(#{$space-x} * #{$i}) !important;
+    }
+}
+
+@for $i from 1 through 20 {
+    .pr-#{$i} {
+        padding-right: calc(#{$space-x} * #{$i}) !important;
+    }
+}
+
+@for $i from 1 through 20 {
+    .pb-#{$i} {
+        padding-bottom: calc(#{$space-x} * #{$i}) !important;
+    }
+}
+
+@for $i from 1 through 20 {
+    .pl-#{$i} {
+        padding-left: calc(#{$space-x} * #{$i}) !important;
+    }
+}
+/*=======================================
+            Paddings - End
+=======================================*/
