@@ -1,6 +1,6 @@
-import styles from "../Components/Ads.module.css";
+import styles from "../Ads/Ads.module.css";
 function Ads(props) {
-  console.log(props.image);
+
   return (
     <>
       <div className={styles.parent}>
