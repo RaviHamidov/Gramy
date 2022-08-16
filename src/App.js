@@ -1,15 +1,14 @@
-import "./App.css";
-import React from "react";
-import Ads from "./components/advertisement/advertisement";
-import Nav from "./components/nav/navigation";
-import Bar from "./components/bar/bar";
-import Carousel from "./components/carousel/carousel";
-import Footer from "./components/footer/footer";
-import Section from "./components/sections/section";
+// Import Css files
+import "../src/app.css";
 
-// Import css files
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+// Import Jsx Components
+import React from "react";
+import Ads from "./components/advertisement";
+import Nav from "./components/navigation";
+import Bar from "./components/bar";
+import Carousel from "./components/carousel";
+import Footer from "./components/footer";
+import Section from "./components/section";
 
 const data = [
     {
