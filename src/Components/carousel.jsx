@@ -1,8 +1,8 @@
 import React from "react";
 import Slider from "react-slick";
 
-import LeftArrow from "../../assets/images/left-arrow.svg";
-import RightArrow from "../../assets/images/right-arrow.svg";
+import LeftArrow from "../assets/images/leftArrow.svg";
+import RightArrow from "../assets/images/rightArrow.svg";
 
 export default function Carousel({ title, data }) {
     const SlickArrowLeft = ({ currentSlide, slideCount, ...props }) => (
