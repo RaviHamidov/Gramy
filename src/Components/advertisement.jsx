@@ -1,4 +1,5 @@
-import styles from "./advertisement.module.css";
+import styles from "../assets/css/main.css";
+
 function Ads(props) {
     return (
         <>

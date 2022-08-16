@@ -1,7 +1,7 @@
-import hamburgerLogo from "./img/icons8-hamburger-24.png";
-import basketLogo from "./img/icons8-basket-24.png";
-import exploreLogo from "./img/icons8-buffet-breakfast-24.png";
-import cityLogo from "./img/icons8-city-24.png";
+import hamburgerLogo from "../assets/images/iconHamburger.png";
+import basketLogo from "../assets/images/iconBreakfast.png";
+import exploreLogo from "../assets/images/iconSearch.png";
+import cityLogo from "../assets/images/iconCity.png";
 
 function Bar() {
     return (
