@@ -1,0 +1,75 @@
+/*=======================================
+              Grid - Start 
+=======================================*/
+@for $i from 1 through 12 {
+    .col-#{$i} {
+        position: relative;
+        width: calc((100% / 12) *#{$i}) !important;
+        box-sizing: border-box;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        width: 100%;
+    }
+
+    @for $i from 1 through 12 {
+        .col-xs-#{$i} {
+            position: relative;
+            width: calc((100% / 12) *#{$i}) !important;
+            box-sizing: border-box;
+            padding: 15px;
+        }
+    }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+    .container {
+        width: 100%;
+    }
+
+    @for $i from 1 through 12 {
+        .col-sm-#{$i} {
+            position: relative;
+            width: calc((100% / 12) *#{$i}) !important;
+            box-sizing: border-box;
+            padding: 15px;
+        }
+    }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+    .container {
+        width: 100%;
+    }
+
+    @for $i from 1 through 12 {
+        .col-md-#{$i} {
+            position: relative;
+            width: calc((100% / 12) *#{$i}) !important;
+            box-sizing: border-box;
+            padding: 15px;
+        }
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+    .container {
+        width: 100%;
+    }
+
+    @for $i from 1 through 12 {
+        .col-lg-#{$i} {
+            position: relative;
+            width: calc((100% / 12) *#{$i}) !important;
+            box-sizing: border-box;
+            padding: 15px;
+        }
+    }
+}
+
+/*=======================================
+              Grid - End
+=======================================*/

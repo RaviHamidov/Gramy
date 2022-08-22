@@ -1,0 +1,65 @@
+/*=======================================
+              Flex - Start 
+=======================================*/
+.container {
+    max-width: $container-width;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.row {
+    @include flex;
+    @include justify-space-between;
+}
+
+.text-align-start {
+    @include text-align-start;
+}
+
+.text-align-center {
+    @include text-align-center;
+}
+
+.text-align-end {
+    @include text-align-end;
+}
+
+.flex {
+    @include flex;
+}
+
+.flex-wrap {
+    @include flex-wrap;
+}
+
+.flex-direction-column {
+    @include flex-direction-column;
+}
+
+.align-items-center {
+    @include align-items-center;
+}
+
+.align-items-end {
+    @include align-items-end;
+}
+
+.justify-content-center {
+    @include justify-content-center;
+}
+
+.justify-content-end {
+    @include justify-content-end;
+}
+
+.flex-center-center {
+    @include flex-center-center;
+}
+
+.flex-center-between {
+    @include flex-center-between;
+}
+
+/*=======================================
+              Flex - End
+=======================================*/

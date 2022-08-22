@@ -18,3 +18,7 @@ Our Application for its delivery platform for food and merchandise. On Wolt’s 
     -   QochAli
     -   Roma(Aysel)
     -   Yashar
+
+# How to run the application?
+
+Move to `client` folder and run `npm start`.
