@@ -4,23 +4,13 @@ import Slider from "react-slick";
 import LeftArrow from "../assets/images/leftArrow.svg";
 import RightArrow from "../assets/images/rightArrow.svg";
 
-export default function Carousel({ title, data }) {
+export default function Card({ title, data }) {
     const SlickArrowLeft = ({ currentSlide, slideCount, ...props }) => (
-        <img
-            className="slick-next"
-            src={LeftArrow}
-            alt="prevArrow"
-            {...props}
-        />
+        <img src={LeftArrow} alt="prevArrow" {...props} />
     );
 
     const SlickArrowRight = ({ currentSlide, slideCount, ...props }) => (
-        <img
-            className="slick-next"
-            src={RightArrow}
-            alt="nextArrow"
-            {...props}
-        />
+        <img src={RightArrow} alt="nextArrow" {...props} />
     );
     const settings = {
         dots: false,
@@ -33,15 +23,8 @@ export default function Carousel({ title, data }) {
         nextArrow: <SlickArrowRight />,
     };
     return (
-        <div className="card__container">
-            <div className="card__container--cta">
-                <h1>{title}</h1>
-                <div className="row">
-                    <h2>See all</h2>
-                    <SlickArrowLeft />
-                    <SlickArrowRight />
-                </div>
-            </div>
+        <div className="card__container container mx-auto">
+            <h1>{title}</h1>
             <Slider {...settings} className="card__container--inner">
                 {data.map((item, index) => {
                     return (
