@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import searchLogo from "../assets/images/iconSearch.png";
-import "../App.css";
+import "../app.css";
 
 function Nav() {
     const searchRef = useRef();
