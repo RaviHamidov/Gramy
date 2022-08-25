@@ -15,27 +15,19 @@
 @import "./abstracts/functions";
 
 /*=======================================
-                Layout 
-=======================================*/
-@import "./layout/grid";
-@import "./layout/flex";
-@import "./layout/fixed";
-@import "./layout/borders";
-@import "./layout/margins";
-@import "./layout/paddings";
-
-/*=======================================
                 Components
 =======================================*/
 @import "./components/adsCard";
-@import "./components/categoriesCard";
-@import "./components/comboCards";
-@import "./components/disCount";
-@import "./components/primaryCard";
-@import "./components/secondaryCard";
-@import "./components/specialCard";
+@import "./components/categories";
 
 /*=======================================
                 Pages
 =======================================*/
-@import "./pages/home";
+
+/*=======================================
+                Themes
+=======================================*/
+
+/*=======================================
+               Vendors
+=======================================*/

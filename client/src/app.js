@@ -1,121 +1,71 @@
-// Import Css files
-import "../src/app.css";
-
 // Import Jsx Components
-import React from "react";
-import Ads from "./components/advertisement";
-import Nav from "./components/navigation";
+import React, { Component } from "react";
 import Bar from "./components/bar";
-import Carousel from "./components/carousel";
+import Nav from "./components/navigation";
+import Ads from "./components/advertisement";
+import Card from "./components/carousel";
 import Footer from "./components/footer";
-import Section from "./components/section";
 
-const data = [
-    {
-        title: "Super discounts in stores!",
-        url: "https://mcdonalds.az/images/40b3007ef474215e514f44edc6a6eb45.png",
-    },
-    {
-        title: "Super discounts in stores!",
-        url: "https://mcdonalds.az/images/40b3007ef474215e514f44edc6a6eb45.png",
-    },
-    {
-        title: "Super discounts in stores!",
-        url: "https://mcdonalds.az/images/40b3007ef474215e514f44edc6a6eb45.png",
-    },
-    {
-        title: "Super discounts in stores!",
-        url: "https://mcdonalds.az/images/40b3007ef474215e514f44edc6a6eb45.png",
-    },
-    {
-        title: "Super discounts in stores!",
-        url: "https://mcdonalds.az/images/40b3007ef474215e514f44edc6a6eb45.png",
-    },
-    {
-        title: "Super discounts in stores!",
-        url: "https://mcdonalds.az/images/40b3007ef474215e514f44edc6a6eb45.png",
-    },
-];
-
-const dataBanner = [
-    {
-        title: "Grocery Specials",
-        url: "https://mcdonalds.az/images/40b3007ef474215e514f44edc6a6eb45.png",
-    },
-    {
-        title: "Grocery Specials",
-        url: "https://mcdonalds.az/images/40b3007ef474215e514f44edc6a6eb45.png",
-    },
-    {
-        title: "Grocery Specials",
-        url: "https://mcdonalds.az/images/40b3007ef474215e514f44edc6a6eb45.png",
-    },
-];
+// Import css files
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const dataForBackPacking = [
-    { url: "https://mcdonalds.az/images/40b3007ef474215e514f44edc6a6eb45.png" },
+    { url: "https://www.wanderon.in/triplist/bir-billing/wanderon-bir-1.jpg" },
     {
-        url: "https://mcdonalds.az/images/40b3007ef474215e514f44edc6a6eb45.png",
+        url: "https://www.wanderon.in/triplist/manali-lahaul/wanderon-manali-1.jpg",
     },
     {
-        url: "https://mcdonalds.az/images/40b3007ef474215e514f44edc6a6eb45.png",
+        url: "https://www.wanderon.in/triplist/kasol-kheerganga/wanderon-kasol-1.jpg",
     },
     {
-        url: "https://mcdonalds.az/images/40b3007ef474215e514f44edc6a6eb45.png",
+        url: "https://www.wanderon.in/triplist/tirthan-valley/wanderon-tirthan-1.jpg",
     },
     {
-        url: "https://mcdonalds.az/images/40b3007ef474215e514f44edc6a6eb45.png",
+        url: "https://www.wanderon.in/triplist/chopta-tungnath/wanderon-chopta-1.jpg",
     },
     {
-        url: "https://mcdonalds.az/images/40b3007ef474215e514f44edc6a6eb45.png",
+        url: "https://www.wanderon.in/triplist/mcleodganj-bir-billing/wanderon-bir-1.jpg",
     },
 ];
 
 const dataTop = [
     {
-        url: "https://mcdonalds.az/images/40b3007ef474215e514f44edc6a6eb45.png",
+        url: "https://www.wanderon.in/triplist/meghalaya-road-trip/wanderon-meghalaya-1.jpg",
     },
     {
-        url: "https://mcdonalds.az/images/40b3007ef474215e514f44edc6a6eb45.png",
+        url: "https://www.wanderon.in/triplist/bir-kasol-kheerganga/wanderon-kasol-1.jpg",
     },
     {
-        url: "https://mcdonalds.az/images/40b3007ef474215e514f44edc6a6eb45.png",
+        url: "https://www.wanderon.in/triplist/kasol-kheerganga-manali/wanderon-manali-1.jpg",
     },
     {
-        url: "https://mcdonalds.az/images/40b3007ef474215e514f44edc6a6eb45.png",
+        url: "https://www.wanderon.in/triplist/parvati-valley-summer/wanderon-parvati-1.jpg",
     },
     {
-        url: "https://mcdonalds.az/images/40b3007ef474215e514f44edc6a6eb45.png",
+        url: "https://www.wanderon.in/triplist/spiti-summer/wanderon-spiti-1.jpg",
     },
     {
-        url: "https://mcdonalds.az/images/40b3007ef474215e514f44edc6a6eb45.png",
+        url: "https://www.wanderon.in/triplist/spiti-circuit-biking/wanderon-spiti-18.jpg",
     },
     {
-        url: "https://mcdonalds.az/images/40b3007ef474215e514f44edc6a6eb45.png",
+        url: "https://www.wanderon.in/triplist/manali-leh-manali/wanderon-ladakh-1.jpg",
     },
 ];
 
-function App() {
-    return (
-        <>
-            <Nav />
-            <Bar />
-            <Ads />
-            <Carousel title="Super discounts in stores!" data={dataTop} />
-            <Carousel title="Super Discounts! 🍔😍" data={dataForBackPacking} />
-            <Carousel title="Grocery Specials 🛒💙" data={dataTop} />
-            <Carousel title="Fastest delivery" data={dataForBackPacking} />
-            <Carousel title="Popular right now" data={dataForBackPacking} />
-            <Section
-                header={"Ən yeni məhsullar"}
-                name={"Baxım məhsulları"}
-                description={"Almaniyadan gətirilmiş təbii baxım məhsulları"}
-                price={12}
-            />
-            <Footer />
-            <p className="text-center">Created by Wolf Team :</p>
-        </>
-    );
+export default class App extends Component {
+    render() {
+        return (
+            <>
+                <Nav />
+                <Bar />
+                <Ads />
+                <Card title="Trending Trips" data={dataTop} />
+                <Card title="Weekend Trips" data={dataForBackPacking} />
+                <Card title="Himalayan Escapades" data={dataTop} />
+                <Card title="Adventure Courses" data={dataForBackPacking} />
+                <Footer />
+            </>
+        );
+    }
 }
-
-export default App;

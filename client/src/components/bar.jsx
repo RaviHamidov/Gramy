@@ -5,7 +5,7 @@ import cityLogo from "../assets/images/iconCity.png";
 
 function Bar() {
     return (
-        <section className="w-2/3 flex justify-between">
+        <section className="w-2/3 flex justify-between mx-auto">
             <div>
                 <img
                     src={cityLogo}
