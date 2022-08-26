@@ -1,11 +1,5 @@
-<<<<<<< HEAD
 import React, { useRef } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-=======
-import { useRef } from "react";
-import searchLogo from "../assets/images/iconSearch.png";
-import "../app.css";
->>>>>>> 2bd671c1c7de3feee44bd41198ec20b64ea0bf9c
 
 function Nav() {
     const searchRef = useRef();
