@@ -136,3 +136,5 @@ function Footer() {
     );
 }
 export default Footer;
+
+// Example
