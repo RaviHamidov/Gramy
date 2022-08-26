@@ -1,28 +1,15 @@
 .card__container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
     h1 {
-        width: 90%;
-        text-align: left;
-        text-transform: capitalize;
         font-size: 2.2vw;
         font-weight: 600;
         color: rgb(58, 58, 58);
     }
     &--inner {
-        width: 90%;
-        padding: 5px;
-        display: block;
         &--card {
             padding: 10px 0;
-            max-width: 308px;
             color: #fff;
             font-size: 50px;
             text-align: center;
-            // background-color: #0a9e88;
             margin-left: 10px;
             transition: all 0.1s ease;
 
