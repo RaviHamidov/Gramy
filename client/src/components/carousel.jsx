@@ -74,3 +74,5 @@ export default function Card({ title, data }) {
         </div>
     );
 }
+
+// Example
