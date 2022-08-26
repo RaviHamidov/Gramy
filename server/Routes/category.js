@@ -51,5 +51,3 @@ router.put("/category:id", async (req, res) => {
     res.send(ok);
 });
 export default router;
-
-// example
