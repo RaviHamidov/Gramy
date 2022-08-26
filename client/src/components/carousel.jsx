@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useRef } from "react";
 import Slider from "react-slick";
 
 import LeftArrow from "../assets/images/leftArrow.svg";
 import RightArrow from "../assets/images/rightArrow.svg";
 
 export default function Card({ title, data }) {
+    const carouselRef = useRef(null);
+
     const SlickArrowLeft = ({ currentSlide, slideCount, ...props }) => (
         <img src={LeftArrow} alt="prevArrow" {...props} />
     );
@@ -19,13 +21,26 @@ export default function Card({ title, data }) {
         slidesToShow: 4,
         slidesToScroll: 1,
         initialSlide: 0,
-        prevArrow: <SlickArrowLeft />,
-        nextArrow: <SlickArrowRight />,
+        arrows: false,
     };
     return (
-        <div className="card__container container mx-auto">
-            <h1>{title}</h1>
-            <Slider {...settings} className="card__container--inner">
+        <div className="card__container container-fluid mx-auto">
+            <div className="card_container--header flex justify-between">
+                <h1>{title}</h1>
+                <div className="card_container--header--cta">
+                    <button onClick={() => carouselRef.current.slickPrev()}>
+                        Prev
+                    </button>
+                    <button onClick={() => carouselRef.current.slickNext()}>
+                        Next
+                    </button>
+                </div>
+            </div>
+
+            <Slider
+                {...settings}
+                ref={carouselRef}
+                className="card__container--inner">
                 {data.map((item, index) => {
                     return (
                         <div

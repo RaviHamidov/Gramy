@@ -363,29 +363,13 @@ body {
   transition: all 0.3s ease;
 }
 
-.card__container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-}
 .card__container h1 {
-  width: 90%;
-  text-align: left;
-  text-transform: capitalize;
   font-size: 2.2vw;
   font-weight: 600;
   color: rgb(58, 58, 58);
 }
-.card__container--inner {
-  width: 90%;
-  padding: 5px;
-  display: block;
-}
 .card__container--inner--card {
   padding: 10px 0;
-  max-width: 308px;
   color: #fff;
   font-size: 50px;
   text-align: center;
