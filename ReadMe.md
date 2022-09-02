@@ -4,10 +4,10 @@ Our Application for its delivery platform for food and merchandise. On Gramy’s
 
 ## Team
 
-| No  | Name / SurName                                          | Image                                                                                             | Role                |
-| --- | ------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------- |
-| 1   | [Ravi Hamidov](https://github.com/RaviHamidov)          | <img style="max-width:50px; max-height:50px;" src="./Storage/RaviHamidov.jpg" alt="ProfilImage">  | Front End Developer |
-| 2   | [Murad Karimli](https://github.com/murad-karimli)       | <img style="max-width:50px; max-height:50px;" src="./Storage/MuradKarimli.jpg" alt="ProfilImage"> | Front End Developer |
-| 3   | [Aysel Seyidahmadova](https://github.com/Seyidahmadova) | <img style="width:50px; height:50px;" src="./Storage/AyselSeyidahmadova.jpg" alt="ProfilImage">   | Back End Developer  |
-| 4   | [QochAli Babayev](https://github.com/Qocali)            | <img style="width:50px; height:50px;" src="./Storage/QochAliBabayev.jpg" alt="ProfilImage">       | Back End Developer  |
-| 5   | [Yashar Quliyev](https://github.com/YasarQuliyv)        | <img style="width:50px; height:50px;" src="./Storage/YasharQuliyev.jpg" alt="ProfilImage">        | Postman Filler      |
+| No  | Name / SurName                                          | Image                                                                                           | Role                |
+| --- | ------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ------------------- |
+| 1   | [Ravi Hamidov](https://github.com/RaviHamidov)          | <img style="width:50px; height:50px;" src="./Storage/RaviHamidov.jpg" alt="ProfilImage">        | Front End Developer |
+| 2   | [Murad Karimli](https://github.com/murad-karimli)       | <img style="width:50px; height:50px;" src="./Storage/MuradKarimli.jpg" alt="ProfilImage">       | Front End Developer |
+| 3   | [Aysel Seyidahmadova](https://github.com/Seyidahmadova) | <img style="width:50px; height:50px;" src="./Storage/AyselSeyidahmadova.jpg" alt="ProfilImage"> | Back End Developer  |
+| 4   | [QochAli Babayev](https://github.com/Qocali)            | <img style="width:50px; height:50px;" src="./Storage/QochAliBabayev.jpg" alt="ProfilImage">     | Back End Developer  |
+| 5   | [Yashar Quliyev](https://github.com/YasarQuliyv)        | <img style="width:50px; height:50px;" src="./Storage/YasharQuliyev.jpg" alt="ProfilImage">      | Postman Filler      |
