@@ -23,7 +23,7 @@ const storage = multer.diskStorage({
   },
 });
 
-const upload = multer({ storage: storage });
+const upload = multer({ storage: storage });  
 router.get("/category", async (req, res) => {
   const data = await categorydb.find({});
   res.send(data);
@@ -31,12 +31,12 @@ router.get("/category", async (req, res) => {
 router.post("/category", upload.single("categoryimage"), async (req, res) => {
   const { path } = req.file;
   const { name } = req.body;
-  const m =await new categorydb({ image: path, name });
+  const m = await new categorydb({ image: path, name });
   m.save();
   res.end("ok");
 });
 router.get("/category/:id", async (req, res) => {
-  const data =await categorydb.findById({ _id: req.params.id });
+  const data = await categorydb.findById({ _id: req.params.id });
   res.send(data);
 });
 router.delete("/category/:id", async (req, res) => {
