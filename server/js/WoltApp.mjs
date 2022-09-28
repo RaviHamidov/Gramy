@@ -3,6 +3,7 @@ import categoryroute from "../Routes/category.js";
 import objectcategory from "../Routes/objectcategory.js";
 import objectRoutes from "../Routes/object.js";
 import orderRoutes from "../Routes/order.js";
+import cors from 'cors'
 import userRoutes from "../Routes/user.js";
 import flial from "../Routes/flial.js";
 import express from "express";
@@ -11,11 +12,12 @@ import { config } from "dotenv";
 
 config();
 
-var url = process.env.Data_Connection;
-mongoose.connect(url);
+var url = "mongodb+srv://Qocali:Psg+1970@cluster0.g9nsa8a.mongodb.net/?retryWrites=true&w=majority";
+mongoose.connect(url,()=>console.log("connected to DB"));
 
 const app = express();
-app.use(express.urlencoded({ extended: true }));
+app.use(cors())
+app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(categoryroute);
 app.use(productroute);
@@ -30,6 +32,6 @@ app.use(userRoutes);
 //         res.redirect("/Login")
 //     }
 // })
-app.listen(6941, () => {
-  console.log("Server is running on port 6941");
+app.listen(5000, () => {
+  console.log("Server is running on port 5000");
 });

@@ -26,8 +26,8 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage: storage });
 
-router.get("/product/all", (req, res) => {
-  const data = product.find({});
+router.get("/product/all", async (req, res) => {
+  const data = await product.find({});
   res.send(data);
 });
 router.get("/object:objid/category:catid/product", (req, res) => {

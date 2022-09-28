@@ -1,5 +1,20 @@
 {
+  "name": "back",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "```\r Our Application for its delivery platform for food and merchandise. On Wolt’s apps (iOS and Android) or website, customers can order food and other items from the platform’s restaurant and merchant partners, and either pick up their order or have it delivered by the platform’s courier partners.\r ```",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server/js/WoltApp.mjs",
+    "server": "nodemon server/js/WoltApp.mjs",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run start\" \"npm run client\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "dependencies": {
+    "concurrently": "^7.4.0",
     "react-slick": "^0.29.0",
     "slick-carousel": "^1.8.1"
   }

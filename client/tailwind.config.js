@@ -2,24 +2,29 @@
 module.exports = {
     content: ["./src/**/*.{js,jsx,ts,tsx}"],
     theme: {
-        screens: {
-            sm: "480px",
-            md: "768px",
-            lg: "976px",
-            xl: "1440px",
-        },
         extend: {
-            colors: {
-                brightRed: "hsl(12, 88%, 59%)",
-                brightRedLight: "hsl(12, 88%, 69%)",
-                brightRedSupLight: "hsl(12, 88%, 95%)",
-                darkBlue: "hsl(228, 39%, 23%)",
-                darkGrayishBlue: "hsl(227, 12%, 61%)",
-                veryDarkBlue: "hsl(233, 12%, 13%)",
-                veryPaleRed: "hsl(13, 100%, 96%)",
-                veryLightGray: "hsl(0, 0%, 98%)",
+            fontFamily: {
+                sans: ["Open Sans", "sans-serif"],
             },
+            colors: {
+                white: "#ffffff",
+                colorPrimaryDefault: "#009de0",
+                colorPrimaryHover: "#1fa9e4",
+                shadowColor: "#009de0",
+            },
+            boxShadow: {
+                primaryShadow: "rgba(0, 0, 0, 0.18) 0px 2px 4px",
+            },
+            spacing: {},
         },
+        plugins: [],
     },
-    plugins: [],
 };
+
+/* TODO: Burada tailwind ucun sirf bu proyekt'de 
+bizim isimize yaraya bilecek utilities'ler configure 
+elemek lazimdi, Vaxt tapan kimi nezer yetirecem 
+
+Niye? : meselen diger bir proyektde yeniden yazmaqa 
+ehtiyacimiz olanda burdan import elemek olar hemde daha az
+kod yazmis olariq */
