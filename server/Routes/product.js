@@ -23,7 +23,6 @@ const storage = multer.diskStorage({
     cb(null, uniqueSuffix + "." + ext);
   },
 });
-
 const upload = multer({ storage: storage });
 
 router.get("/product/all", async (req, res) => {

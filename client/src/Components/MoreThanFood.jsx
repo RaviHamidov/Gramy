@@ -23,8 +23,13 @@ export default function MoreThanFood({ title, data }) {
 
   const settings = {
     dots: false,
-    infinite: false,
-    speed: 500,
+    infinite: true,
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    autoplay: true,
+    speed: 2000,
+    autoplaySpeed: 5000,
+    cssEase: "linear",
     slidesToShow: 6.1,
     slidesToScroll: 2,
     initialSlide: 0,

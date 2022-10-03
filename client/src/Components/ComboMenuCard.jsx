@@ -22,10 +22,15 @@ export default function ComboMenuCard({ title, data }) {
   );
   const settings = {
     dots: false,
-    infinite: false,
-    speed: 500,
-    slidesToShow: 4.1,
+    infinite: true,
+    slidesToShow: 2,
     slidesToScroll: 1,
+    autoplay: true,
+    speed: 2000,
+    autoplaySpeed: 4500,
+    cssEase: "linear",
+    slidesToShow: 6.1,
+    slidesToScroll: 2,
     initialSlide: 0,
     arrows: false,
   };

@@ -23,7 +23,12 @@ export default function Advertisement({ title, data }) {
   const settings = {
     dots: false,
     infinite: true,
-    speed: 500,
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    autoplay: true,
+    speed: 2000,
+    autoplaySpeed: 5000,
+    cssEase: "linear",
     slidesToShow: 2,
     slidesToScroll: 1,
     initialSlide: 0,
