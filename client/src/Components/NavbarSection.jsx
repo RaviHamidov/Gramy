@@ -66,7 +66,7 @@ function NavBar() {
           >
             {" "}
             <FontAwesomeIcon className="mr-2 text-xl" icon={faCartShopping} />
-            <a href="#">Stores</a>
+            <span>Stores</span>
           </NavLink>
         </div>
         {/* navbar_content End <= */}

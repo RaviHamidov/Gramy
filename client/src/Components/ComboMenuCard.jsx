@@ -58,20 +58,20 @@ export default function ComboMenuCard({ title, data }) {
         <Slider {...settings} ref={carouselRef}>
           {data.map((item, index) => {
             return (
-              <>
-              <Link to="/res"  key={index}  className="rounded-2xl hover:rounded-2xl text-white text-2xl align-center overflow-hidden mb-16 p-2 relative"
-                  key={index}>
-                  <img
-                    className="rounded-xl hover:rounded-2xl scale-100 hover:scale-105 transition-all duration-300 mx-auto"
-                    src={item.url}
-                    alt="hero_img"
-                  />
-                  <div className="absolute z-20 bottom-8 left-8">
-                    <h2 className="text-white text-3xl">Grocery Shopping</h2>
-                    <p className="text-white text-lg">Grocery Shopping</p>
-                  </div>
-                </Link>
-              </>
+              <div key={index}>
+                <Link to="/res"  className="rounded-2xl hover:rounded-2xl text-white text-2xl align-center overflow-hidden mb-16 p-2 relative"
+                  >
+                    <img
+                      className="rounded-xl hover:rounded-2xl scale-100 hover:scale-105 transition-all duration-300 mx-auto"
+                      src={item.url}
+                      alt="hero_img"
+                    />
+                    <div className="absolute z-20 bottom-8 left-8">
+                      <h2 className="text-white text-3xl">Grocery Shopping</h2>
+                      <p className="text-white text-lg">Grocery Shopping</p>
+                    </div>
+                  </Link>
+              </div>
             );
           })}
         </Slider>

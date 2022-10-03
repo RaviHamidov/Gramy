@@ -61,7 +61,7 @@ export default function PrimaryCard({ title, data }) {
         <Slider {...settings} ref={carouselRef}>
           {data.map((item, index) => {
             return (
-              <Link to="/res">
+              <Link to="/res" key={index}>
                 <div
                   className="!w-fit rounded-2xl text-white text-2xl align-center transition-all duration-300 shadow-primary focus:border-none hover:scale-105 m-2 mb-16 mr-2 "
                   key={index}
