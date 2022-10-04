@@ -10,9 +10,21 @@ import CategoriesCard from "../Components/CategoriesCard";
 import MoreThanFood from "../Components/MoreThanFood";
 import QuickLink from "../Components/QuickLink";
 import Modal from "react-modal";
+import { useState } from "react";
 Modal.setAppElement(document.getElementById("root"));
 
 function DiscoverPage() {
+    const[categories,setCategories]=useState([])
+  useEffect(() => {
+    fetchAll()
+  }, []);
+
+  async function fetchAll(){
+    const data=await fetch("http://localhost:6941/category");
+    const json=await data.json();
+    setCategories(json)
+    console.log(json)
+  }
   return (
     <div>
       {" "}
