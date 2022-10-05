@@ -1,6 +1,7 @@
 // Import Jsx Components
 import React, { useEffect } from "react";
 import { Routes, Navigate, Route, json } from "react-router-dom";
+import Categories from "./Components/Categories";
 import Page404 from "./Pages/404";
 import DiscoverPage from "./Pages/DiscoverPage";
 
@@ -17,6 +18,7 @@ function App() {
           element={<Navigate to="/discover" replace />}
         />
         <Route path="/discover" element={<DiscoverPage />} />
+        <Route path="/category" element={<Categories/>} />
         <Route path="/restaurants" element={<RestaurantsPage />} />
         <Route path="/res" element={<SpecialRestaurant />} />
         <Route path="stores" element={<StoresPage />} />
