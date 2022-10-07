@@ -9,7 +9,7 @@ import RestaurantsPage from "./Pages/RestaurantsPage";
 import SpecialRestaurant from "./Pages/SpecialRestaurant";
 import StoresPage from "./Pages/StoresPage";
 function App() {
-
+  
   return (
     <>
       <Routes>
@@ -18,7 +18,6 @@ function App() {
           element={<Navigate to="/discover" replace />}
         />
         <Route path="/discover" element={<DiscoverPage />} />
-        <Route path="/category" element={<Categories/>} />
         <Route path="/restaurants" element={<RestaurantsPage />} />
         <Route path="/res" element={<SpecialRestaurant />} />
         <Route path="stores" element={<StoresPage />} />

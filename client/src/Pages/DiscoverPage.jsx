@@ -10,7 +10,7 @@ import CategoriesCard from "../Components/CategoriesCard";
 import MoreThanFood from "../Components/MoreThanFood";
 import QuickLink from "../Components/QuickLink";
 import Modal from "react-modal";
-import { useState } from "react";
+import { useState ,useEffect} from "react";
 Modal.setAppElement(document.getElementById("root"));
 
 function DiscoverPage() {
@@ -20,7 +20,7 @@ function DiscoverPage() {
   }, []);
 
   async function fetchAll(){
-    const data=await fetch("http://localhost:6941/category");
+    const data=await fetch("http://localhost:5000/product/all");
     const json=await data.json();
     setCategories(json)
     console.log(json)

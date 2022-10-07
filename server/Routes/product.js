@@ -23,14 +23,15 @@ const storage = multer.diskStorage({
     cb(null, uniqueSuffix + "." + ext);
   },
 });
+
 const upload = multer({ storage: storage });
 
-router.get("/product/all", async (req, res) => {
+router.get("/product/all",async (req, res) => {
   const data = await product.find({});
   res.send(data);
 });
-router.get("/object:objid/category:catid/product", (req, res) => {
-  const data = objectproduct
+router.get("/object:objid/category:catid/product", async (req, res) => {
+  const data = await objectproduct
     .find({})
     .where("objectid", req.params.objid)
     .populate("productid");
@@ -45,8 +46,6 @@ router.post("/product", upload.single("productimage"), async (req, res) => {
     grocery,
     Excelent,
     discount,
-    open,
-    close,
     Freedeliver,
   } = req.body;
   const m = new product({
@@ -56,28 +55,27 @@ router.post("/product", upload.single("productimage"), async (req, res) => {
     grocery,
     Excelent,
     discount,
-    open,
-    close,
     Freedeliver,
   });
   m.save();
   res.end("ok");
 });
-router.get("/product:id", (req, res) => {
-  const data = product.findById({ id: req.params.id }).populate("category");
+router.get("/product/:id",async (req, res) => {
+  const data =await product.findById({ _id: req.params.id }).populate("categoryId").exec();
+  console.log(data)
   res.send(data);
 });
-router.delete("/product:id", (req, res) => {
-  const data = product.findByIdAndUpdate(req.params.id, { IsDeactive: true });
+router.delete("/product/:id",async (req, res) => {
+  const data =await product.findByIdAndUpdate(req.params.id, { IsDeactive: true });
   res.send(data);
 });
-router.put("/product:id", (req, res) => {
-  const data = product.findByIdAndUpdate(
+router.put("/product/:id",async (req, res) => {
+  const data =await product.findByIdAndUpdate(
     {
-      id: req.params.id,
+      _id: req.params.id,
     },
     req.body
-  );
+  ).exec();
   res.send(data);
 });
 export default router;
