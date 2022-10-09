@@ -1,17 +1,20 @@
 // Import Jsx Components
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Routes, Navigate, Route, json } from "react-router-dom";
+
+
 import Categories from "./Components/Categories";
 import Page404 from "./Pages/404";
 import DiscoverPage from "./Pages/DiscoverPage";
-
 import RestaurantsPage from "./Pages/RestaurantsPage";
 import SpecialRestaurant from "./Pages/SpecialRestaurant";
 import StoresPage from "./Pages/StoresPage";
+
 function App() {
-  
+ 
   return (
     <>
+ 
       <Routes>
         <Route
           path="/"

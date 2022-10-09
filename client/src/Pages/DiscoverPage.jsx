@@ -10,24 +10,29 @@ import CategoriesCard from "../Components/CategoriesCard";
 import MoreThanFood from "../Components/MoreThanFood";
 import QuickLink from "../Components/QuickLink";
 import Modal from "react-modal";
+
 import { useState ,useEffect} from "react";
 Modal.setAppElement(document.getElementById("root"));
 
 function DiscoverPage() {
-    const[categories,setCategories]=useState([])
-  useEffect(() => {
-    fetchAll()
-  }, []);
+  const[products,setProducts]=useState([])
 
-  async function fetchAll(){
-    const data=await fetch("http://localhost:5000/product/all");
-    const json=await data.json();
-    setCategories(json)
-    console.log(json)
-  }
+  useEffect(()=>{
+    const fetchAll=async()=>{
+      const allData= await fetch("http://localhost:5000/product/all");
+      const allJson= await allData.json()
+     products.push(allJson)
+     console.log(products)
+    }
+
+    fetchAll()
+  },[])
+ 
   return (
     <div>
-      {" "}
+      {products.forEach(elem=>elem.map((prod,index)=>{
+        return <p>{prod.id}</p>
+      }))}
       <Header />
       <NavBar />
       <OpeningPeriod />
@@ -37,6 +42,7 @@ function DiscoverPage() {
       <PrimaryCard title="Shopping on Wolt 💸" data={primaryData} />
       <PrimaryCard title="Popular right now" data={primaryData} />
       <PrimaryCard title="Lunch near you" data={primaryData} />
+       
       <ComboMenuCard title="Combo Menus 🍱" data={primaryData} />
       {/* Discounts 😍  => bu hisse ucun comboMenuCard componentinden
            istifade eledim optimal fikrim var o formada edecem heleki bele qalsin, 
