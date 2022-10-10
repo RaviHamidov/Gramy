@@ -10,29 +10,42 @@ import CategoriesCard from "../Components/CategoriesCard";
 import MoreThanFood from "../Components/MoreThanFood";
 import QuickLink from "../Components/QuickLink";
 import Modal from "react-modal";
+import reactStringReplace from "react-string-replace"
+import ii from "../Public/image/product/1661319530996-699202338.jpg"
+
 
 import { useState ,useEffect} from "react";
 Modal.setAppElement(document.getElementById("root"));
 
 function DiscoverPage() {
   const[products,setProducts]=useState([])
-
   useEffect(()=>{
     const fetchAll=async()=>{
       const allData= await fetch("http://localhost:5000/product/all");
       const allJson= await allData.json()
-     products.push(allJson)
-     console.log(products)
+      console.log(allJson)
+     setProducts(()=> allJson.map((json) => {
+      return {
+        id: json._id,
+        image:json.image,
+        created_at:json.created_at,
+      };
+    }))
     }
-
-    fetchAll()
+     fetchAll()
   },[])
+
  
   return (
     <div>
-      {products.forEach(elem=>elem.map((prod,index)=>{
-        return <p>{prod.id}</p>
-      }))}
+     
+      {
+        products.map((prod,index)=>{
+          return(<img key={index} src={`/${prod.image}`} alt={`${prod.image}`}></img>)
+        })
+      
+      }
+      <img src={ii} alt="dmskl"></img>
       <Header />
       <NavBar />
       <OpeningPeriod />
