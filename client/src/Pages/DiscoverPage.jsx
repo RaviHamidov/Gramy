@@ -41,7 +41,7 @@ function DiscoverPage() {
      
       {
         products.map((prod,index)=>{
-          return(<img key={index} src={`/${prod.image}`} alt={`${prod.image}`}></img>)
+          return(<img key={index} src={`"..\"+${prod.image}`} alt={` ${"..\ "+prod.image}`} />)
         })
       
       }
